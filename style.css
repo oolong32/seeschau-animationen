@@ -1,0 +1,66 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  /* center items on page */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertikale */
+  align-items: center;     /* Horizontale*/
+  /* Text */
+  font-family: 'PFBagueSansPro', sans-serif; 
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.68;
+  font-variant-numeric: proportional-nums;
+}
+
+#container {                                                                                          
+  margin-top: 2em;                                                                                          ;
+  color: black;
+  font-size: 2.5rem; 
+  font-weight: 500; 
+  letter-spacing: 0.53rem;
+}
+
+#svg-container {
+  /*transform: scale(2);*/
+}                                                                 
+
+svg {
+  background: transparent;
+  fill: black;
+}
+
+/* Index Page */
+
+h1 { font-weight: 400; }
+h1, ul li {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul {
+	font-size: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+}
+
+ul li a,
+ul li a:link,
+ul li a:visited,
+ul li a:hover,
+ul li a:focus {
+  text-decoration: none;
+  color: deeppink;
+}
