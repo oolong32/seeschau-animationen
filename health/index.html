@@ -6,6 +6,11 @@
   <title></title>
   <link rel="stylesheet" href="../fonts.css">
   <link rel="stylesheet" href="../style.css">
+  <style>
+    #svg-container {
+      transform: scale(1.9);
+    }
+  </style>
 </head>
 
 <body>
@@ -27,29 +32,43 @@
             <polygon id="l-narrow" fill="#000000" fill-rule="nonzero" points="0 0 10.9 0 10.9 63.9 22.4 63.9 22.4 67.5 0 67.5"></polygon>
     </svg>
 
-    <svg id="t-box" width="28px" height="68px" viewBox="0 0 28 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg style="position:relative; left: -3px;" id="t-box" width="28px" height="68px" viewBox="0 0 28 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <polygon id="t-narrow" fill="#000000" fill-rule="nonzero" points="0 3.6 0 0 27.4 0 27.4 3.6 19.3 3.6 19.3 67.5 8.4 67.5 8.4 3.6"></polygon>
     </svg>
 
-    <svg id="h-box" width="35px" height="68px" viewBox="0 0 35 68" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg style="position:relative; left: -3px;" id="h-box" width="35px" height="68px" viewBox="0 0 35 68" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <polygon id="h-polygon" fill-rule="nonzero" points="10.9 67.5 0 67.5 0 0 10.9 0 10.9 30.4 19.8 30.4 19.8 0 30.7 0 30.7 67.5 19.8 67.5 19.8 34 10.9 34"></polygon>
     </svg>
 
   </div>
 
   <div id="copyright">
-    <p>by House of Sacred Arts, Zurich</p>
+    <p>by Seeschau, House of Sacred Arts, Zurich</p>
   </div>
-  
+
   <script src="../js/TweenMax.min.js"></script>
+  <script src="../js/widths.js"></script>
   <script src="../js/vertices.js"></script>
   <script>
-
     let delay = Math.random() * 2;
 
-    // TweenMax.to('#x-box',5,{attr:{width:"85px", viewBox:"0 0 85 69"},repeat:-1,yoyo:true, repeatDelay:delay-0.125,ease:Elastic.easeInOut});
-    // TweenMax.to('#x-path',5,{attr:{d:sPoints},repeat:-1,yoyo:true, repeatDelay:delay-0.125,ease:Elastic.easeInOut});
-    // delay minus 0.125, 0.1, 0.125, 0.15, 1, 0.175 … sinnlos. einfach fixieren!
+    TweenMax.to('#h-box',5,{attr:{width: hwidest, viewBox: `0 0 ${hwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.5,ease:Elastic.easeInOut});
+    TweenMax.to('#h-polygon',5,{attr:{points: hwide },repeat:-1,yoyo:true, repeatDelay:delay+0.5,ease:Elastic.easeInOut});
+
+    TweenMax.to('#e-box',5,{attr:{width: ewidest, viewBox: `0 0 ${ewidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.5,ease:Elastic.easeInOut});
+    TweenMax.to('#e-polygon',5,{attr:{points: ewide },repeat:-1,yoyo:true, repeatDelay:delay-0.5,ease:Elastic.easeInOut});
+
+    TweenMax.to('#a-box',5,{attr:{width: awidest, viewBox: `0 0 ${awidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.15,ease:Elastic.easeInOut});
+    TweenMax.to('#a-path',5,{attr:{d: awide },repeat:-1,yoyo:true, repeatDelay:delay+0.15,ease:Elastic.easeInOut});
+
+    TweenMax.to('#l-box',5,{attr:{width: lwidest, viewBox: `0 0 ${lwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.75,ease:Elastic.easeInOut});
+    TweenMax.to('#l-narrow',5,{attr:{points: lwide },repeat:-1,yoyo:true, repeatDelay:delay+0.75,ease:Elastic.easeInOut});
+
+    TweenMax.to('#t-box',5,{left: "-10px", attr:{width: twidest, viewBox: `0 0 ${twidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.25,ease:Elastic.easeInOut});
+    TweenMax.to('#t-narrow',5,{attr:{points: twide },repeat:-1,yoyo:true, repeatDelay:delay+0.25,ease:Elastic.easeInOut});
+
+    TweenMax.to('#h-box',5,{left: "-10px", attr:{width: hwidest, viewBox: `0 0 ${hwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.25,ease:Elastic.easeInOut});
+    TweenMax.to('#h-polygon',5,{attr:{points: hwide },repeat:-1,yoyo:true, repeatDelay:delay-0.25,ease:Elastic.easeInOut});
 
   </script>
 

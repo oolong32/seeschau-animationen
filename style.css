@@ -1,10 +1,12 @@
 body {
-  width: 100vw;
-  height: 100vh;
+  height: 1082px;
+  width: 1082px;
+  border: solid 1px #000;
+  margin: 4em auto auto;
   /* center items on page */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertikale */
+  justify-content: flex-end; /* Vertikale */
   align-items: center;     /* Horizontale*/
   /* Text */
   font-family: 'PFBagueSansPro', sans-serif; 
@@ -17,8 +19,8 @@ body {
   font-variant-numeric: proportional-nums;
 }
 
-#container {                                                                                          
-  margin-top: 2em;                                                                                          ;
+#container {
+  margin-top: 2em;
   color: black;
   font-size: 2.5rem; 
   font-weight: 500; 
@@ -26,12 +28,18 @@ body {
 }
 
 #svg-container {
-  /*transform: scale(2);*/
-}                                                                 
+  transform: scale(1.75);
+  margin-bottom: 21em;
+}
 
 svg {
   background: transparent;
   fill: black;
+}
+
+#copyright {
+  font-weight: 500;
+  font-size: 48px;
 }
 
 /* Index Page */
@@ -64,3 +72,13 @@ ul li a:focus {
   text-decoration: none;
   color: deeppink;
 }
+
+/*
+#frame {
+  width: 1080px;
+  height: 1080px;
+  border: solid 1px #ececec;
+  position: fixed;
+  margin: auto;
+}
+*/
