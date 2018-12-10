@@ -27,9 +27,9 @@
       justify-content: center; /* Vertikale */
       align-items: center;     /* Horizontale*/
 
-      background: url('img/patio.png');
-      background-position: bottom center;
-      background-size: 185%;
+      background: white;
+      background-size: cover;
+      /*background-position: bottom center;*/
       /*
         ahorn.png
         blumenschale.png
@@ -50,7 +50,7 @@
       margin: 0;
     }
     svg {
-      fill: #ffffff;
+      fill: #000;
     }
     #copyright {
       color: white;
@@ -113,29 +113,29 @@
 
     let delay = Math.random() * 2;
 
-    TweenMax.to('#s-box',5,{attr:{width: swidest, viewBox: `0 0 ${swidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.45,ease:Elastic.easeInOut});
-    TweenMax.to('#s-path',5,{attr:{d: swide },repeat:-1,yoyo:true, repeatDelay:delay+0.45,ease:Elastic.easeInOut});
+    TweenMax.to('#s-box',5,{attr:{width: swidest, viewBox: `0 0 ${swidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.35,ease:Elastic.easeInOut});
+    TweenMax.to('#s-path',5,{attr:{d: swide },repeat:-1,yoyo:true, repeatDelay:delay+0.35,ease:Elastic.easeInOut});
 
     TweenMax.to('#e-box',5,{attr:{width: ewidest, viewBox: `0 0 ${ewidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.15,ease:Elastic.easeInOut});
     TweenMax.to('#e-polygon',5,{attr:{points: ewide },repeat:-1,yoyo:true, repeatDelay:delay-0.15,ease:Elastic.easeInOut});
 
-    TweenMax.to('#e-box2',5,{attr:{width: ewidest, viewBox: `0 0 ${ewidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.25,ease:Elastic.easeInOut});
-    TweenMax.to('#e-polygon2',5,{attr:{points: ewide },repeat:-1,yoyo:true, repeatDelay:delay-0.25,ease:Elastic.easeInOut});
+    TweenMax.to('#e-box2',5,{attr:{width: ewidest, viewBox: `0 0 ${ewidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.35,ease:Elastic.easeInOut});
+    TweenMax.to('#e-polygon2',5,{attr:{points: ewide },repeat:-1,yoyo:true, repeatDelay:delay-0.35,ease:Elastic.easeInOut});
 
-    TweenMax.to('#s-box2',5,{attr:{width: swidest, viewBox: `0 0 ${swidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.65,ease:Elastic.easeInOut});
-    TweenMax.to('#s-path2',5,{attr:{d: swide },repeat:-1,yoyo:true, repeatDelay:delay-0.65,ease:Elastic.easeInOut});
+    TweenMax.to('#s-box2',5,{attr:{width: swidest, viewBox: `0 0 ${swidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.55,ease:Elastic.easeInOut});
+    TweenMax.to('#s-path2',5,{attr:{d: swide },repeat:-1,yoyo:true, repeatDelay:delay-0.55,ease:Elastic.easeInOut});
 
-    TweenMax.to('#c-box',5,{attr:{width: cwidest, viewBox: `0 0 ${cwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.45,ease:Elastic.easeInOut});
-    TweenMax.to('#c-path',5,{attr:{d: cwide },repeat:-1,yoyo:true, repeatDelay:delay-0.45,ease:Elastic.easeInOut});
+    TweenMax.to('#c-box',5,{attr:{width: cwidest, viewBox: `0 0 ${cwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.45,ease:Elastic.easeInOut});
+    TweenMax.to('#c-path',5,{attr:{d: cwide },repeat:-1,yoyo:true, repeatDelay:delay+0.45,ease:Elastic.easeInOut});
 
-    TweenMax.to('#h-box',5,{attr:{width: hwidest, viewBox: `0 0 ${hwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.15,ease:Elastic.easeInOut});
-    TweenMax.to('#h-polygon',5,{attr:{points: hwide },repeat:-1,yoyo:true, repeatDelay:delay+0.15,ease:Elastic.easeInOut});
+    TweenMax.to('#h-box',5,{attr:{width: hwidest, viewBox: `0 0 ${hwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.75,ease:Elastic.easeInOut});
+    TweenMax.to('#h-polygon',5,{attr:{points: hwide },repeat:-1,yoyo:true, repeatDelay:delay+0.75,ease:Elastic.easeInOut});
 
     TweenMax.to('#a-box',5,{attr:{width: awidest, viewBox: `0 0 ${awidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.25,ease:Elastic.easeInOut});
     TweenMax.to('#a-path',5,{attr:{d: awide },repeat:-1,yoyo:true, repeatDelay:delay+0.25,ease:Elastic.easeInOut});
 
-    TweenMax.to('#u-box',5,{attr:{width: uwidest, viewBox: `0 0 ${uwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.35,ease:Elastic.easeInOut});
-    TweenMax.to('#u-path',5,{attr:{d: uwide },repeat:-1,yoyo:true, repeatDelay:delay-0.35,ease:Elastic.easeInOut});
+    TweenMax.to('#u-box',5,{attr:{width: uwidest, viewBox: `0 0 ${uwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay-0.25,ease:Elastic.easeInOut});
+    TweenMax.to('#u-path',5,{attr:{d: uwide },repeat:-1,yoyo:true, repeatDelay:delay-0.25,ease:Elastic.easeInOut});
 
     // delay minus 0.125, 0.1, 0.125, 0.15, 1, 0.175 … sinnlos. einfach fixieren!
 
