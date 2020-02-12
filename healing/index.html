@@ -45,17 +45,116 @@
     <p>by Seeschau, House of Sacred Arts, Zurich</p>
   </div>
   
-  <div id="frame"></div>
-
   <script src="../js/TweenMax.min.js"></script>
   <script src="../js/vertices.js"></script>
+  <script src="../js/widths.js"></script>
   <script>
 
     let delay = Math.random() * 2;
 
-    // TweenMax.to('#x-box',5,{attr:{width:"85px", viewBox:"0 0 85 69"},repeat:-1,yoyo:true, repeatDelay:delay-0.125,ease:Elastic.easeInOut});
-    // TweenMax.to('#x-path',5,{attr:{d:sPoints},repeat:-1,yoyo:true, repeatDelay:delay-0.125,ease:Elastic.easeInOut});
-    // delay minus 0.125, 0.1, 0.125, 0.15, 1, 0.175 … sinnlos. einfach fixieren!
+   TweenMax.to(
+      '#h-box',
+      5,
+      {
+        attr: {width: hwidest, viewBox: `0 0 ${hwidest} 69`},
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: delay+0.15,
+        ease: Elastic.easeInOut
+      }
+    );
+    TweenMax.to(
+      '#h-polygon',
+      5,
+      {
+        attr: {points: hwide},
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: delay+0.15,
+        ease: Elastic.easeInOut
+      }
+    );
+
+    TweenMax.to(
+      '#e-box',
+      5,
+      {
+        attr: {width: ewidest, viewBox: `0 0 ${ewidest} 69`},
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: delay-0.3,
+        ease:Elastic.easeInOut
+      }
+    );
+    TweenMax.to(
+      '#e-polygon',
+      5,
+      {
+        attr: {points: ewide},
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: delay-0.3,
+        ease: Elastic.easeInOut
+      }
+    );
+
+    TweenMax.to(
+      '#a-box',
+      5,
+      {
+        /*left: "3px",*/
+        attr: {width: awidest, viewBox: `0 0 ${awidest} 69`},
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: delay+0.25,
+        ease:Elastic.easeInOut
+      }
+    );
+    TweenMax.to(
+      '#a-path',
+      5,
+      {
+        attr: {d: awide },
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: delay+0.25,
+        ease:Elastic.easeInOut
+      }
+    );
+
+    TweenMax.to('#l-box',5,{attr:{width: lwidest, viewBox: `0 0 ${lwidest} 69`},repeat:-1,yoyo:true, repeatDelay:delay+0.75,ease:Elastic.easeInOut});
+    TweenMax.to('#l-narrow',5,{attr:{points: lwide },repeat:-1,yoyo:true, repeatDelay:delay+0.75,ease:Elastic.easeInOut});
+
+    TweenMax.to('#i-box',5,{attr:{width: iwidest, viewBox: `0 0 ${iwidest} 68`},repeat:-1,yoyo:true, repeatDelay:delay+0.45,ease:Elastic.easeInOut});
+    TweenMax.to('#i-narrow',5,{attr: {points: iwide},repeat:-1,yoyo:true, repeatDelay:delay+0.45,ease:Elastic.easeInOut});
+
+    TweenMax.to('#n-box',5,{attr:{width: nwidest, viewBox: `0 0 ${nwidest} 68`},repeat:-1,yoyo:true, repeatDelay:delay-0.15,ease:Elastic.easeInOut});
+    TweenMax.to('#n-narrow',5,{attr: {points: nwide},repeat:-1,yoyo:true, repeatDelay:delay-0.15,ease:Elastic.easeInOut});
+
+    TweenMax.to(
+      '#g-box',
+      5,
+      {
+        attr: {width: gwidest, viewBox: `0 0 ${gwidest} 68`},
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: delay-0.15,
+        ease:Elastic.easeInOut
+      }
+    );
+    TweenMax.to(
+      '#g-narrow',
+      5,
+      {
+        attr: {d: gwide},
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: delay-0.15,
+        ease:Elastic.easeInOut
+      }
+    );
+
+
 
   </script>
 
